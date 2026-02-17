@@ -21,6 +21,7 @@ const Footer = () => {
     }, []);
 
     useEffect(() => {
+        const cleanups = [];
         magneticRefs.current.forEach((btn) => {
             if (!btn) return;
 
@@ -37,7 +38,14 @@ const Footer = () => {
 
             btn.addEventListener('mousemove', handleMouseMove);
             btn.addEventListener('mouseleave', handleMouseLeave);
+
+            cleanups.push(() => {
+                btn.removeEventListener('mousemove', handleMouseMove);
+                btn.removeEventListener('mouseleave', handleMouseLeave);
+            });
         });
+
+        return () => cleanups.forEach((fn) => fn());
     }, []);
 
     return (
@@ -56,10 +64,10 @@ const Footer = () => {
                 <div className="footer-cta-group">
                     <a
                         ref={(el) => (magneticRefs.current[0] = el)}
-                        href="mailto:hello@alex.design"
+                        href="mailto:miladiadem58@gmail.com"
                         className="magnetic-btn footer-cta-primary"
                     >
-                        hello@alex.design
+                        @Adem_Miladi
                     </a>
                     <a
                         ref={(el) => (magneticRefs.current[1] = el)}
@@ -75,23 +83,26 @@ const Footer = () => {
                     <div>
                         <h4 className="footer-grid-label">Socials</h4>
                         <ul className="footer-grid-list">
-                            <li><a href="#" className="footer-link">Twitter / X</a></li>
-                            <li><a href="#" className="footer-link">LinkedIn</a></li>
-                            <li><a href="#" className="footer-link">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/adem.miladi.79" className="footer-link">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/in/miladi-adem/" className="footer-link">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/adem.miladi/" className="footer-link">Instagram</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="footer-grid-label">Services</h4>
                         <ul className="footer-grid-list">
-                            <li>Product Design</li>
-                            <li>Design Systems</li>
-                            <li>Motion Direction</li>
+                            <li>Frontend Development</li>
+                            <li>React & Next.js Applications</li>
+                            <li>Responsive Web Design</li>
+                            <li>UI Implementation from Figma</li>
+                            <li>Performance Optimization</li>
+                            <li>Interactive Animations (GSAP / Framer Motion)</li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="footer-grid-label">Location</h4>
                         <p className="footer-grid-text">
-                            San Francisco, CA<br />
+                            Tunis, Tunisia<br />
                             Remote Available
                         </p>
                     </div>
@@ -103,7 +114,7 @@ const Footer = () => {
 
                 {/* Copyright */}
                 <div className="footer-copyright">
-                    <span>© 2024 Alex Design.</span>
+                    <span>© 2025 Adem Miladi.</span>
                     <span>All Rights Reserved.</span>
                 </div>
             </div>

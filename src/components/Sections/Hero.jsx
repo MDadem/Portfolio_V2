@@ -42,15 +42,19 @@ const Hero = () => {
             {/* Background Blobs */}
             <div className="hero-blobs">
                 <div className="hero-blob hero-blob--primary animate-float" />
-                <div className="hero-blob hero-blob--secondary animate-float" style={{ animationDelay: '-3s' }} />
+                <div
+                    className="hero-blob hero-blob--secondary animate-float"
+                    style={{ animationDelay: '-3s' }}
+                />
             </div>
 
-            {/* Hero Text Container - 3D parallax */}
+            {/* Hero Text Container - 3D Parallax */}
             <div ref={heroContainerRef} className="hero-text-container perspective-1000">
-                {/* Giant background text */}
-                <h1 className="hero-giant-text text-stroke">SYSTEMS</h1>
 
-                {/* Main text lines */}
+                {/* Giant Background Word */}
+                <h1 className="hero-giant-text text-stroke">FRONTEND</h1>
+
+                {/* Main Headline */}
                 <div className="hero-lines">
                     <div style={{ overflow: 'hidden' }}>
                         <motion.h1
@@ -60,9 +64,10 @@ const Hero = () => {
                             animate="visible"
                             className="hero-line"
                         >
-                            I DESIGN <span className="gradient-primary">SCALABLE</span>
+                            I BUILD <span className="gradient-primary">SCALABLE</span>
                         </motion.h1>
                     </div>
+
                     <div style={{ overflow: 'hidden' }}>
                         <motion.h1
                             custom={1}
@@ -71,9 +76,10 @@ const Hero = () => {
                             animate="visible"
                             className="hero-line"
                         >
-                            <span className="gradient-secondary">PRODUCT</span> SYSTEMS
+                            <span className="gradient-secondary">FRONTEND</span> SYSTEMS
                         </motion.h1>
                     </div>
+
                     <div style={{ overflow: 'hidden' }}>
                         <motion.h1
                             custom={2}
@@ -82,7 +88,7 @@ const Hero = () => {
                             animate="visible"
                             className="hero-line"
                         >
-                            THAT <span style={{ color: '#525252' }}>GROW</span>
+                            THAT <span style={{ color: '#525252' }}>SCALE</span>
                         </motion.h1>
                     </div>
                 </div>
@@ -95,17 +101,18 @@ const Hero = () => {
                         initial="hidden"
                         animate="visible"
                     >
-                        <p className="hero-subtitle-title">Product Designer</p>
+                        <p className="hero-subtitle-title">Frontend Engineer</p>
                         <p className="hero-subtitle-desc">
-                            Focused on scalable systems, interaction clarity, and measurable outcomes.
+                            Focused on scalable architecture, performance optimization,
+                            and maintainable UI systems.
                             <br className="hidden-mobile" />
-                            I turn complexity into usable structure.
+                            I turn complex interfaces into reliable, production-ready code.
                         </p>
                     </motion.div>
                 </div>
             </div>
 
-            {/* Scroll indicator */}
+            {/* Scroll Indicator */}
             <div className="scroll-indicator animate-bounce">
                 <span>Scroll to explore</span>
                 <ArrowDown size={16} />

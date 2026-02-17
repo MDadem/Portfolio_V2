@@ -1,28 +1,28 @@
 import { useEffect, useRef } from 'react';
 import { CheckCircle } from 'lucide-react';
-
 const differentiators = [
     {
-        text: "I've shipped production products, not just prototypes.",
+        text: "I ship production-ready frontend applications, not just UI demos.",
         color: '#6E5CFF',
         bgColor: 'rgba(110, 92, 255, 0.1)',
     },
     {
-        text: 'I understand product constraints, not just UI polish.',
+        text: "I build scalable React architectures, not just isolated components.",
         color: '#A3FF12',
         bgColor: 'rgba(163, 255, 18, 0.1)',
     },
     {
-        text: 'I work comfortably inside engineering realities.',
+        text: "I care about performance, accessibility, and clean code — not just visuals.",
         color: '#8171FF',
         bgColor: 'rgba(129, 113, 255, 0.1)',
     },
     {
-        text: 'I optimize for business impact, not Dribbble likes.',
+        text: "I optimize for real users and business results, not just animations.",
         color: '#B4FF40',
         bgColor: 'rgba(180, 255, 64, 0.1)',
     },
 ];
+
 
 const Differentiation = () => {
     const itemsRef = useRef([]);

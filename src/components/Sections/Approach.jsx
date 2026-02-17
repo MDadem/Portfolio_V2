@@ -1,49 +1,48 @@
 import { useEffect, useRef } from 'react';
 import { LayoutGrid, Layers, Zap, BarChart3 } from 'lucide-react';
-
 const approaches = [
     {
-        title: 'Structure First',
+        title: 'Architecture First',
         Icon: LayoutGrid,
         color: '#6E5CFF',
         bgColor: 'rgba(110, 92, 255, 0.2)',
         content: [
-            'Information architecture and user flow precede visual design.',
-            'Clear hierarchy reduces cognitive load and increases task completion.',
-            'Structure is the foundation of scalable product design.',
+            'Component structure and state management come before styling.',
+            'Clean architecture prevents technical debt as the product grows.',
+            'Scalability is designed, not added later.',
         ],
     },
     {
-        title: 'Systems Over Screens',
+        title: 'Systems Over Pages',
         Icon: Layers,
         color: '#A3FF12',
         bgColor: 'rgba(163, 255, 18, 0.2)',
         content: [
-            'I design component libraries, not isolated mockups.',
-            'Reusable patterns reduce design and engineering time.',
-            'Systems thinking enables teams to ship faster with consistency.',
+            'I build reusable component systems, not one-off screens.',
+            'Consistent design tokens and patterns improve maintainability.',
+            'Strong systems allow teams to move faster with fewer bugs.',
         ],
     },
     {
-        title: 'Motion With Purpose',
+        title: 'Performance With Purpose',
         Icon: Zap,
         color: '#8171FF',
         bgColor: 'rgba(129, 113, 255, 0.2)',
         content: [
-            'Animation communicates state, hierarchy, and feedback.',
-            'Every transition should reduce confusion, not add decoration.',
-            'Motion is a design tool, not an afterthought.',
+            'Performance is part of the user experience.',
+            'Optimized rendering, lazy loading, and clean bundles matter.',
+            'Animations enhance clarity — never block interaction.',
         ],
     },
     {
-        title: 'Measure Everything',
+        title: 'Measure & Iterate',
         Icon: BarChart3,
         color: '#B4FF40',
         bgColor: 'rgba(180, 255, 64, 0.2)',
         content: [
-            'Design decisions should be validated with user behavior data.',
-            'Metrics like activation, retention, and conversion guide iteration.',
-            'Impact matters more than aesthetics.',
+            'Frontend decisions should align with product metrics.',
+            'User behavior informs improvements and refactoring.',
+            'Impact and maintainability matter more than hype.',
         ],
     },
 ];

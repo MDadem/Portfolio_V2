@@ -3,51 +3,58 @@ import { useEffect, useRef } from 'react';
 
 const projects = [
     {
-        title: 'Nova Financial',
-        subtitle: 'Redesigned onboarding architecture to reduce cognitive load and increase activation.',
-        description: 'Rebuilt the mobile banking experience with fluid motion and predictive interfaces. Focused on reducing friction in account setup and first transaction completion.',
-        image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop',
-        tags: ['Fintech', 'Lead Product Designer', '4 Months'],
+        title: 'FitForge',
+        subtitle: 'Modern fitness web application for workout tracking and performance analytics.',
+        description:
+            'Built a responsive gym management and workout tracking platform with real-time progress charts, authentication, and performance dashboards. Focused on clean architecture, optimized rendering, and smooth micro-interactions.',
+        image:
+            'https://images.unsplash.com/photo-1579758629938-03607ccdbaba?q=80&w=1470&auto=format&fit=crop',
+        tags: ['Fitness App', 'React', '6 Months'],
         metrics: [
-            { label: 'Retention', value: '+40%', colored: true },
-            { label: 'Avg. Time', value: '2.5s', colored: false },
-            { label: 'Collaboration', value: 'Team of 5', colored: false },
+            { label: 'Active Users', value: '1k+', colored: true },
+            { label: 'Performance', value: '95+ Lighthouse', colored: false },
+            { label: 'Stack', value: 'React / Node', colored: false },
         ],
         color: '#6E5CFF',
-        gradientFrom: 'rgba(90, 74, 219, 0.2)',
+        gradientFrom: 'rgba(110, 92, 255, 0.2)',
         stickyTop: 96,
     },
     {
-        title: 'Nexus AI',
-        subtitle: 'Built the core interaction model and visual language for a generative design system.',
-        description: '0 → 1 product design for an AI-powered design tool. Focused on reducing complexity in generative workflows while maintaining creative control for users.',
-        image: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1374&auto=format&fit=crop',
-        tags: ['AI Tool', 'Founding Designer', '6 Months'],
+        title: 'InsightAI Dashboard',
+        subtitle: 'AI-powered analytics dashboard for business intelligence.',
+        description:
+            'Developed a scalable frontend architecture for an AI SaaS dashboard with dynamic data visualization, role-based access, and real-time updates. Emphasized performance optimization, reusable component systems, and clean state management.',
+        image:
+            'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&auto=format&fit=crop',
+        tags: ['AI SaaS', 'Dashboard', '5 Months'],
         metrics: [
-            { label: 'Users', value: '10k+', colored: true },
-            { label: 'Product', value: '0 → 1', colored: false },
-            { label: 'Collaboration', value: 'Team of 3', colored: false },
+            { label: 'Data Points', value: '1M+', colored: true },
+            { label: 'Load Time', value: '<1.5s', colored: false },
+            { label: 'Team', value: 'Team of 1', colored: false },
         ],
         color: '#A3FF12',
-        gradientFrom: 'rgba(140, 230, 15, 0.2)',
+        gradientFrom: 'rgba(163, 255, 18, 0.2)',
         stickyTop: 112,
     },
     {
-        title: 'Lumina',
-        subtitle: 'Immersive e-commerce experience focused on WebGL product visualization and seamless transitions.',
-        description: 'Designed a high-end lighting e-commerce platform with 3D product exploration. Balanced visual richness with performance and conversion optimization.',
-        image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1470&auto=format&fit=crop',
-        tags: ['E-Commerce', 'Senior Product Designer', '5 Months'],
+        title: 'NovaCommerce',
+        subtitle: 'High-performance e-commerce platform with advanced UI interactions.',
+        description:
+            'Engineered a modern e-commerce frontend with product filtering, smooth animations, and optimized checkout flows. Focused on accessibility, performance budgets, and scalable component design.',
+        image:
+            'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1470&auto=format&fit=crop',
+        tags: ['E-Commerce', 'Frontend Engineering', '4 Months'],
         metrics: [
-            { label: 'Conversion', value: '3x', colored: true },
-            { label: 'SOTD', value: 'Awwwards', colored: false },
-            { label: 'Collaboration', value: 'Team of 8', colored: false },
+            { label: 'Conversion', value: '+32%', colored: true },
+            { label: 'Core Web Vitals', value: 'Optimized', colored: false },
+            { label: 'Stack', value: 'React / Stripe', colored: false },
         ],
         color: '#8171FF',
         gradientFrom: 'rgba(129, 113, 255, 0.2)',
         stickyTop: 128,
     },
 ];
+
 
 const Projects = () => {
     const cardRefs = useRef([]);

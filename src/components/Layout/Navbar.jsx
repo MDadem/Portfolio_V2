@@ -44,9 +44,16 @@ const Navbar = () => {
             className="navbar"
         >
             {/* Logo */}
-            <div style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '20px', letterSpacing: '-0.02em' }}>
-                <span style={{ color: '#E5E5E5' }}>ALEX</span>
-                <span style={{ color: '#525252' }}>.DESIGN</span>
+            <div
+                style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontWeight: 700,
+                    fontSize: '20px',
+                    letterSpacing: '-0.02em',
+                }}
+            >
+                <span style={{ color: '#E5E5E5' }}>ADEM</span>
+                <span style={{ color: '#525252' }}>.MILADI</span>
             </div>
 
             {/* Nav Links */}
@@ -56,12 +63,21 @@ const Navbar = () => {
                 <a href="#about">About</a>
             </div>
 
-            {/* CTA Button */}
-            <button ref={btnRef} className="magnetic-btn nav-cta group">
+            {/* CTA Button → LinkedIn */}
+            <a
+                ref={btnRef}
+                href="https://www.linkedin.com/in/miladi-adem/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="magnetic-btn nav-cta group"
+                style={{ textDecoration: 'none' }}
+            >
+
                 <span className="nav-cta-text">Let's Talk</span>
                 <div className="nav-cta-fill" />
-            </button>
+            </a>
         </nav>
+
     );
 };
 

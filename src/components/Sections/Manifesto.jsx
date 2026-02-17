@@ -1,12 +1,33 @@
 import { useEffect, useRef } from 'react';
 
 const items = [
-    { text: 'Design is decision-making', highlight: 'under constraint.', color: '#525252' },
-    { text: 'Speed without structure', highlight: 'creates debt.', color: '#6E5CFF' },
-    { text: 'Motion is communication,', highlight: 'not decoration.', color: '#A3FF12' },
-    { text: 'Systems scale.', highlight: "Screens don't.", color: '#E5E5E5' },
-    { text: 'Clarity', highlight: 'reduces cost.', color: '#8171FF' },
+    {
+        text: 'Architecture determines speed,',
+        highlight: 'not shortcuts.',
+        color: '#525252'
+    },
+    {
+        text: 'Quick fixes today',
+        highlight: 'become tech debt tomorrow.',
+        color: '#6E5CFF'
+    },
+    {
+        text: 'Performance is a feature,',
+        highlight: 'not an afterthought.',
+        color: '#A3FF12'
+    },
+    {
+        text: 'Components scale.',
+        highlight: "Pages don't.",
+        color: '#E5E5E5'
+    },
+    {
+        text: 'Clean code',
+        highlight: 'reduces cost.',
+        color: '#8171FF'
+    },
 ];
+
 
 const Manifesto = () => {
     const itemsRef = useRef([]);
