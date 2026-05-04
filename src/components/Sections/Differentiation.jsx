@@ -52,7 +52,7 @@ const Differentiation = () => {
         <section className="diff-section">
             <div className="container-5xl">
                 <div className="diff-header">
-                    <span className="section-label" style={{ color: '#A3FF12' }}>05 / Differentiation</span>
+                    <span className="section-label" style={{ color: '#A3FF12' }}>06 / Differentiation</span>
                     <h2 className="section-title">Why I'm <span className="text-stroke">Different</span></h2>
                 </div>
 
