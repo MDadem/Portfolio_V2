@@ -56,8 +56,8 @@ const Footer = () => {
             <div className="container-5xl footer-content">
                 {/* CTA Heading */}
                 <h2 className="footer-heading">
-                    Let's build <br />
-                    <span className="gradient-primary-secondary">scalable systems.</span>
+                    Let's create <br />
+                    <span className="gradient-primary-secondary">something extraordinary.</span>
                 </h2>
 
                 {/* CTA Buttons */}
@@ -83,9 +83,10 @@ const Footer = () => {
                     <div>
                         <h4 className="footer-grid-label">Socials</h4>
                         <ul className="footer-grid-list">
-                            <li><a href="https://www.facebook.com/adem.miladi.79" className="footer-link">Facebook</a></li>
-                            <li><a href="https://www.linkedin.com/in/miladi-adem/" className="footer-link">LinkedIn</a></li>
-                            <li><a href="https://www.instagram.com/adem.miladi/" className="footer-link">Instagram</a></li>
+                            <li><a href="https://github.com/MDadem" className="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/miladi-adem/" className="footer-link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/adem.miladi/" className="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a href="https://www.facebook.com/adem.miladi.79" className="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a></li>
                         </ul>
                     </div>
                     <div>

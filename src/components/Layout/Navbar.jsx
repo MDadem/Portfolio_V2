@@ -1,7 +1,17 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 const Navbar = () => {
     const btnRef = useRef(null);
+    const navRef = useRef(null);
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         const btn = btnRef.current;
@@ -29,55 +39,41 @@ const Navbar = () => {
 
     return (
         <nav
-            style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                zIndex: 40,
-                padding: '24px 24px',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                mixBlendMode: 'difference',
-            }}
-            className="navbar"
+            ref={navRef}
+            className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
         >
             {/* Logo */}
-            <div
-                style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontWeight: 700,
-                    fontSize: '20px',
-                    letterSpacing: '-0.02em',
-                }}
-            >
-                <span style={{ color: '#E5E5E5' }}>ADEM</span>
-                <span style={{ color: '#525252' }}>.MILADI</span>
+            <div className="nav-logo">
+                <span className="nav-logo-primary">AD</span>
+                <span className="nav-logo-secondary">.dev</span>
             </div>
 
             {/* Nav Links */}
             <div className="nav-links">
-                <a href="#work">Work</a>
-                <a href="#thinking">Thinking</a>
-                <a href="#about">About</a>
+                <a href="#work" className="nav-link">
+                    <span className="nav-link-text">Work</span>
+                </a>
+                <a href="#thinking" className="nav-link">
+                    <span className="nav-link-text">Thinking</span>
+                </a>
+                <a href="#about" className="nav-link">
+                    <span className="nav-link-text">About</span>
+                </a>
             </div>
 
-            {/* CTA Button → LinkedIn */}
+            {/* CTA Button */}
             <a
                 ref={btnRef}
                 href="https://www.linkedin.com/in/miladi-adem/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="magnetic-btn nav-cta group"
+                className="magnetic-btn nav-cta"
                 style={{ textDecoration: 'none' }}
             >
-
+                <span className="nav-cta-glow" />
                 <span className="nav-cta-text">Let's Talk</span>
-                <div className="nav-cta-fill" />
             </a>
         </nav>
-
     );
 };
 

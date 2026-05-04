@@ -10,9 +10,9 @@ const config = defineConfig({
             },
             colors: {
                 background: {
-                    900: { value: '#0B0D12' },
-                    800: { value: '#141821' },
-                    700: { value: '#1E2330' },
+                    900: { value: '#050608' },
+                    800: { value: '#0A0C12' },
+                    700: { value: '#141821' },
                 },
                 neutral: {
                     50: { value: '#F5F5F5' },
@@ -41,7 +41,7 @@ const config = defineConfig({
     },
     globalCss: {
         'html, body': {
-            bg: 'background.900',
+            bg: '#050608',
             color: 'neutral.100',
             fontFamily: 'body',
             scrollBehavior: 'smooth',
@@ -50,7 +50,7 @@ const config = defineConfig({
             width: '8px',
         },
         '::-webkit-scrollbar-track': {
-            background: '#0B0D12',
+            background: '#050608',
         },
         '::-webkit-scrollbar-thumb': {
             background: '#333',
