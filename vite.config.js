@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  assetsInclude: ['**/*.pdf'],
   build: {
     // Disable sourcemaps for production (smaller bundle, no leaking source)
     sourcemap: false,
@@ -22,8 +23,13 @@ export default defineConfig({
       },
     },
     // Inline small assets as base64
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 0,
     // CSS code splitting
     cssCodeSplit: true,
+  },
+  server: {
+    fs: {
+      strict: false,
+    },
   },
 })

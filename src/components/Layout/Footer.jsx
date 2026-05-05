@@ -1,7 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
+import CvModal from '../CvModal/CvModal';
 
 const Footer = () => {
     const [time, setTime] = useState('--:-- PST');
+    const [cvOpen, setCvOpen] = useState(false);
     const magneticRefs = useRef([]);
 
     useEffect(() => {
@@ -69,13 +71,27 @@ const Footer = () => {
                     >
                         @Adem_Miladi
                     </a>
-                    <a
+                    <button
                         ref={(el) => (magneticRefs.current[1] = el)}
-                        href="#"
+                        onClick={() => {
+                            const a = document.createElement('a');
+                            a.href = '/Adem_cv_final.pdf';
+                            a.download = 'Adem_Miladi_CV.pdf';
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                        }}
                         className="magnetic-btn footer-cta-secondary"
                     >
                         Download CV
-                    </a>
+                    </button>
+                    <button
+                        ref={(el) => (magneticRefs.current[2] = el)}
+                        onClick={() => setCvOpen(true)}
+                        className="magnetic-btn footer-cta-secondary"
+                    >
+                        View CV
+                    </button>
                 </div>
 
                 {/* Footer Grid */}
@@ -119,6 +135,8 @@ const Footer = () => {
                     <span>All Rights Reserved.</span>
                 </div>
             </div>
+
+            <CvModal isOpen={cvOpen} onClose={() => setCvOpen(false)} />
 
             {/* Background blob */}
             <div className="footer-blob" />

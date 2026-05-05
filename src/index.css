@@ -2309,6 +2309,7 @@ body {
   display: inline-block;
   padding: 18px 40px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
   color: #A3A3A3;
   border-radius: 9999px;
   font-weight: 700;

@@ -159,18 +159,13 @@ const Hero = () => {
                 className="hero-stats"
             >
                 <div className="hero-stat">
-                    <span className="hero-stat-value gradient-primary">3+</span>
-                    <span className="hero-stat-label">Years Experience</span>
-                </div>
-                <div className="hero-stat-divider" />
-                <div className="hero-stat">
-                    <span className="hero-stat-value gradient-secondary">15+</span>
+                    <span className="hero-stat-value gradient-primary">10+</span>
                     <span className="hero-stat-label">Projects Delivered</span>
                 </div>
                 <div className="hero-stat-divider" />
                 <div className="hero-stat">
-                    <span className="hero-stat-value" style={{ color: '#00D2BE' }}>100%</span>
-                    <span className="hero-stat-label">Client Satisfaction</span>
+                    <span className="hero-stat-value gradient-secondary">4+</span>
+                    <span className="hero-stat-label">Internships Completed</span>
                 </div>
             </motion.div>
 
