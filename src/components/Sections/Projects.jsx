@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useEffect, useRef } from 'react';
+import { trackEvent } from '../../tracker/TrackingProvider';
 
 const projects = [
     {
@@ -184,7 +185,12 @@ const Projects = () => {
                                                 </div>
                                             ))}
                                         </div>
-                                        <a href="#" className="project-cta" style={{ color: project.color }}>
+                                        <a
+                                            href="#"
+                                            className="project-cta"
+                                            style={{ color: project.color }}
+                                            onClick={() => trackEvent('project_clicked', { projectName: project.title })}
+                                        >
                                             View Full Case Study <ArrowRight size={16} />
                                         </a>
                                     </div>

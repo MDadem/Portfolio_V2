@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import CvModal from '../CvModal/CvModal';
+import { trackEvent } from '../../tracker/TrackingProvider';
 
 const Footer = () => {
     const [time, setTime] = useState('--:-- PST');
@@ -68,12 +69,14 @@ const Footer = () => {
                         ref={(el) => (magneticRefs.current[0] = el)}
                         href="mailto:miladiadem58@gmail.com"
                         className="magnetic-btn footer-cta-primary"
+                        onClick={() => trackEvent('email_clicked', { email: 'miladiadem58@gmail.com' })}
                     >
                         @Adem_Miladi
                     </a>
                     <button
                         ref={(el) => (magneticRefs.current[1] = el)}
                         onClick={() => {
+                            trackEvent('cv_downloaded', { fileType: 'pdf', source: 'footer_button' });
                             const a = document.createElement('a');
                             a.href = '/Adem_cv_final.pdf';
                             a.download = 'Adem_Miladi_CV.pdf';

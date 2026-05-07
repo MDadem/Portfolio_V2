@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as pdfjsLib from 'pdfjs-dist';
 import pdfjsWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 import cvPdfBase64 from '../../cv/pdf-data.js';
+import { trackEvent } from '../../tracker/TrackingProvider';
 import './cv-modal.css';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorkerUrl;
@@ -28,6 +29,7 @@ const CvModal = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (!isOpen) return;
+    trackEvent('cv_previewed', { source: 'modal' });
     setLoading(true);
     setError(false);
     setCurrentPage(1);
@@ -100,6 +102,7 @@ const CvModal = ({ isOpen, onClose }) => {
   }, [isOpen, handleKeyDown]);
 
   const handleDownload = () => {
+    trackEvent('cv_downloaded', { fileType: 'pdf', fileName: 'Adem_Miladi_CV.pdf' });
     const buf = base64ToArrayBuffer(cvPdfBase64);
     const blob = new Blob([buf], { type: 'application/pdf' });
     const url = URL.createObjectURL(blob);

@@ -7,17 +7,27 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:api": "node api/dev-server.js",
+    "seed-admin": "node scripts/hashPassword.js",
+    "hash-password": "node scripts/hashPassword.js"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.33.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
     "framer-motion": "^12.34.0",
+    "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.564.0",
+    "mongoose": "^8.9.5",
+    "nodemailer": "^6.10.1",
     "pdfjs-dist": "^5.7.284",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "ua-parser-js": "^2.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

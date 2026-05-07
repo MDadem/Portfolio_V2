@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
+import { Lock } from 'lucide-react';
 
 const Navbar = () => {
     const btnRef = useRef(null);
@@ -61,18 +62,50 @@ const Navbar = () => {
                 </a>
             </div>
 
-            {/* CTA Button */}
-            <a
-                ref={btnRef}
-                href="https://www.linkedin.com/in/miladi-adem/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="magnetic-btn nav-cta"
-                style={{ textDecoration: 'none' }}
-            >
-                <span className="nav-cta-glow" />
-                <span className="nav-cta-text">Let's Talk</span>
-            </a>
+            {/* Right side actions */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <button
+                    onClick={() => {
+                        window.history.pushState({}, '', '/panel');
+                        window.dispatchEvent(new PopStateEvent('popstate'));
+                    }}
+                    className="nav-panel-icon"
+                    title="Portfolio Panel"
+                    style={{
+                        background: 'none',
+                        border: 'none',
+                        color: 'rgba(255,255,255,0.35)',
+                        cursor: 'pointer',
+                        padding: '6px',
+                        borderRadius: '6px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transition: 'color 0.3s ease, background 0.3s ease',
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.color = 'rgba(255,255,255,0.9)';
+                        e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.color = 'rgba(255,255,255,0.35)';
+                        e.currentTarget.style.background = 'none';
+                    }}
+                >
+                    <Lock size={14} strokeWidth={1.8} />
+                </button>
+                <a
+                    ref={btnRef}
+                    href="https://www.linkedin.com/in/miladi-adem/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="magnetic-btn nav-cta"
+                    style={{ textDecoration: 'none' }}
+                >
+                    <span className="nav-cta-glow" />
+                    <span className="nav-cta-text">Let's Talk</span>
+                </a>
+            </div>
         </nav>
     );
 };
