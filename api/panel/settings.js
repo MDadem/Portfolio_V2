@@ -1,8 +1,8 @@
-import { connectDB } from '../lib/db.js';
-import { verifyToken } from '../lib/auth.js';
-import Visitor from '../lib/models/Visitor.js';
-import Event from '../lib/models/Event.js';
-import Admin from '../lib/models/Admin.js';
+import { connectDB } from '../_lib/db.js';
+import { verifyToken } from '../_lib/auth.js';
+import Visitor from '../_lib/models/Visitor.js';
+import Event from '../_lib/models/Event.js';
+import Admin from '../_lib/models/Admin.js';
 import bcrypt from 'bcryptjs';
 
 export default async function handler(req, res) {
@@ -97,3 +97,4 @@ export default async function handler(req, res) {
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
+

@@ -26,3 +26,4 @@ export async function recordLoginAttempt(ip, email, success) {
   await connectDB();
   await LoginAttempt.create({ ip, email, success });
 }
+

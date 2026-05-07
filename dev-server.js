@@ -19,33 +19,33 @@ async function loadHandler(path) {
 
 // Auth routes
 app.post('/api/auth/login', async (req, res) => {
-  const handler = await loadHandler('./auth/login.js');
+  const handler = await loadHandler('./api//login.js');
   await handler(req, res);
 });
 
 app.get('/api/auth/verify', async (req, res) => {
-  const handler = await loadHandler('./auth/verify.js');
+  const handler = await loadHandler('./api//verify.js');
   await handler(req, res);
 });
 
 app.post('/api/auth/logout', async (req, res) => {
-  const handler = await loadHandler('./auth/logout.js');
+  const handler = await loadHandler('./api//logout.js');
   await handler(req, res);
 });
 
 app.post('/api/auth/forgot-password', async (req, res) => {
-  const handler = await loadHandler('./auth/forgot-password.js');
+  const handler = await loadHandler('./api//forgot-password.js');
   await handler(req, res);
 });
 
 app.post('/api/auth/reset-password', async (req, res) => {
-  const handler = await loadHandler('./auth/reset-password.js');
+  const handler = await loadHandler('./api//reset-password.js');
   await handler(req, res);
 });
 
 // Tracking
 app.post('/api/track', async (req, res) => {
-  const handler = await loadHandler('./track.js');
+  const handler = await loadHandler('./api/.js');
   await handler(req, res);
 });
 
@@ -58,32 +58,32 @@ app.options('/api/track', (req, res) => {
 
 // Panel routes
 app.get('/api/panel/visitors', async (req, res) => {
-  const handler = await loadHandler('./panel/visitors.js');
+  const handler = await loadHandler('./api//visitors.js');
   await handler(req, res);
 });
 
 app.get('/api/panel/events', async (req, res) => {
-  const handler = await loadHandler('./panel/events.js');
+  const handler = await loadHandler('./api//events.js');
   await handler(req, res);
 });
 
 app.get('/api/panel/analytics', async (req, res) => {
-  const handler = await loadHandler('./panel/analytics.js');
+  const handler = await loadHandler('./api//analytics.js');
   await handler(req, res);
 });
 
 app.get('/api/panel/settings', async (req, res) => {
-  const handler = await loadHandler('./panel/settings.js');
+  const handler = await loadHandler('./api//settings.js');
   await handler(req, res);
 });
 
 app.post('/api/panel/settings', async (req, res) => {
-  const handler = await loadHandler('./panel/settings.js');
+  const handler = await loadHandler('./api//settings.js');
   await handler(req, res);
 });
 
 app.get('/api/panel/map-data', async (req, res) => {
-  const handler = await loadHandler('./panel/map-data.js');
+  const handler = await loadHandler('./api//map-data.js');
   await handler(req, res);
 });
 
@@ -92,3 +92,4 @@ app.listen(PORT, () => {
   console.log(`[API] Dev server running on http://localhost:${PORT}`);
   console.log(`[API] Make sure .env is configured and MongoDB is accessible`);
 });
+

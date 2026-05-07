@@ -1,4 +1,4 @@
-import { clearTokenCookie } from '../lib/auth.js';
+import { clearTokenCookie } from '../_lib/auth.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -8,3 +8,4 @@ export default async function handler(req, res) {
   clearTokenCookie(res);
   return res.status(200).json({ success: true, message: 'Logged out' });
 }
+

@@ -1,4 +1,4 @@
-import { verifyToken } from '../lib/auth.js';
+import { verifyToken } from '../_lib/auth.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -12,3 +12,4 @@ export default async function handler(req, res) {
 
   return res.status(200).json({ authenticated: true, email: user.email });
 }
+

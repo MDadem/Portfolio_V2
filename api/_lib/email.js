@@ -51,3 +51,4 @@ export async function sendResetEmail(toEmail, resetLink) {
 
   return mailer.sendMail(mailOptions);
 }
+

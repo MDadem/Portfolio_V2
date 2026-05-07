@@ -1,8 +1,8 @@
-import { connectDB } from './lib/db.js';
-import Visitor from './lib/models/Visitor.js';
-import Event from './lib/models/Event.js';
-import { geolocateIP } from './lib/geolocate.js';
-import { parseUserAgent } from './lib/parseUserAgent.js';
+import { connectDB } from './_lib/db.js';
+import Visitor from './_lib/models/Visitor.js';
+import Event from './_lib/models/Event.js';
+import { geolocateIP } from './_lib/geolocate.js';
+import { parseUserAgent } from './_lib/parseUserAgent.js';
 import crypto from 'crypto';
 
 export default async function handler(req, res) {
@@ -139,3 +139,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
+

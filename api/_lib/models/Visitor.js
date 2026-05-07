@@ -28,3 +28,4 @@ VisitorSchema.index({ country: 1 });
 VisitorSchema.index({ sessionStart: -1 });
 
 export default mongoose.models.Visitor || mongoose.model('Visitor', VisitorSchema);
+

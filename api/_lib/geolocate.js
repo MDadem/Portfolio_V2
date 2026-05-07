@@ -35,3 +35,4 @@ export async function geolocateIP(ip) {
     longitude: 0,
   };
 }
+

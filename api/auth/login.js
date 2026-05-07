@@ -1,8 +1,8 @@
 import bcrypt from 'bcryptjs';
-import { connectDB } from '../lib/db.js';
-import { createToken, setTokenCookie } from '../lib/auth.js';
-import { checkRateLimit, recordLoginAttempt } from '../lib/rateLimit.js';
-import Admin from '../lib/models/Admin.js';
+import { connectDB } from '../_lib/db.js';
+import { createToken, setTokenCookie } from '../_lib/auth.js';
+import { checkRateLimit, recordLoginAttempt } from '../_lib/rateLimit.js';
+import Admin from '../_lib/models/Admin.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -54,3 +54,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Internal server error' });
   }
 }
+

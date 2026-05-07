@@ -11,3 +11,4 @@ LoginAttemptSchema.index({ ip: 1, timestamp: -1 });
 LoginAttemptSchema.index({ timestamp: 1 }, { expireAfterSeconds: 86400 });
 
 export default mongoose.models.LoginAttempt || mongoose.model('LoginAttempt', LoginAttemptSchema);
+

@@ -12,3 +12,4 @@ const ResetTokenSchema = new mongoose.Schema({
 ResetTokenSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 0 });
 
 export default mongoose.models.ResetToken || mongoose.model('ResetToken', ResetTokenSchema);
+

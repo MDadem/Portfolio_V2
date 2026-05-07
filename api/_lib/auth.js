@@ -39,3 +39,4 @@ function parseCookies(cookieString) {
   });
   return cookies;
 }
+

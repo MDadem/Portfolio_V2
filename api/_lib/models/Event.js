@@ -14,3 +14,4 @@ EventSchema.index({ timestamp: -1 });
 EventSchema.index({ eventName: 1, timestamp: -1 });
 
 export default mongoose.models.Event || mongoose.model('Event', EventSchema);
+

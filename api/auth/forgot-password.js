@@ -1,8 +1,8 @@
 import crypto from 'crypto';
-import { connectDB } from '../lib/db.js';
-import Admin from '../lib/models/Admin.js';
-import ResetToken from '../lib/models/ResetToken.js';
-import { sendResetEmail } from '../lib/email.js';
+import { connectDB } from '../_lib/db.js';
+import Admin from '../_lib/models/Admin.js';
+import ResetToken from '../_lib/models/ResetToken.js';
+import { sendResetEmail } from '../_lib/email.js';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -63,3 +63,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Failed to send reset email. Check SMTP configuration.' });
   }
 }
+
